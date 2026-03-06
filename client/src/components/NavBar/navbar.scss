@@ -1,0 +1,161 @@
+@import "../../responsive.scss";
+@font-face {
+  font-family: "Elianto";
+  src: url("../../../assets/fonts/Elianto-Regular.ttf") format("truetype");
+}
+
+.logo {
+  width: 30px;
+}
+nav {
+  padding: 10px 0;
+  z-index: 50;
+}
+nav p {
+  font-family: "Elianto", sans-serif;
+  font-size: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+
+  &:hover {
+    scale: 1.05;
+  }
+  @include sm {
+    z-index: 60;
+    position: relative;
+  }
+}
+
+.container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  @include sm {
+    z-index: 4;
+    padding: 0;
+  }
+}
+
+.menu-container ul {
+  display: flex;
+  list-style-type: none;
+  gap: 35px;
+  font-size: 18px;
+  color: rgb(174, 173, 173);
+
+  @include sm {
+    display: none;
+  }
+}
+
+ul li:hover {
+  scale: 1.15;
+  cursor: pointer;
+  color: #ff5a3c;
+}
+
+.user {
+  display: flex;
+  gap: 4px;
+  border-radius: 10px;
+  border: solid 1px;
+  border-color: #ffffff;
+  padding: 10px;
+  transition: border 0.3s;
+  transition: all 0.5s ease;
+
+  @include sm {
+    display: none;
+  }
+}
+.user:hover {
+  background-color: #1877f2;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.user a {
+  font-size: 18px;
+}
+.mobile-menuicon {
+  display: none;
+  margin-right: 10px;
+
+  @include sm {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 60;
+  }
+}
+
+.mobile-menu ul {
+  display: grid;
+  gap: 3rem;
+  list-style-type: none;
+  font-size: 24px;
+  justify-items: center;
+  align-items: center;
+}
+
+.mobile-menuicon img {
+  width: 50px;
+  filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(65deg)
+    brightness(104%) contrast(106%);
+  position: relative;
+  z-index: 6;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay {
+  display: none;
+
+  @include sm {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50%;
+  background-color: #0b162c;
+  color: white;
+  z-index: 5;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}

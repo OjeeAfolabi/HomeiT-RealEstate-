@@ -1,0 +1,55 @@
+@import "../../responsive.scss";
+.main {
+  min-height: 100vh;
+  background-color: black;
+}
+
+@include sm {
+  .slider {
+    display: none;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition:
+    opacity 5s ease,
+    transform 8s ease-out;
+  // transition: opacity 5s ease;
+  transform: scale(1);
+}
+
+.slide.active {
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+.mobile-background {
+  display: none;
+
+  @include sm {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

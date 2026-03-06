@@ -1,0 +1,41 @@
+@import "../../responsive.scss";
+.search-menu {
+  display: flex;
+  gap: 5px;
+  input {
+    background-color: #c5ccd8;
+    padding: 2px 20px;
+    border-radius: 10px 0;
+    border: none;
+    text-align: center;
+    color: #0b162c;
+    width: 220px;
+    font-size: 20px;
+  }
+  .search {
+    padding: 8px;
+    width: 100px;
+    border: none;
+    border-radius: 10px 0;
+    background-color: #1877f2;
+    cursor: pointer;
+  }
+  @include sm {
+    display: none;
+  }
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.values p {
+  color: #adadad;
+}
+
+h2 {
+  color: #c5ccd8;
+}

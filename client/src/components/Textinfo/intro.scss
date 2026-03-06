@@ -1,0 +1,85 @@
+@import "../../responsive.scss";
+
+.intro {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+
+  @include sm {
+    top: 20%;
+  }
+}
+.intro span {
+  color: #ff5a3c;
+}
+.greet {
+  font-size: 24px;
+}
+.intro h1 {
+  font-size: 70px;
+  font-weight: 700;
+
+  @include sm {
+    font-size: 30px;
+  }
+}
+
+.menu {
+  position: relative;
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  border: 1px solid #ffffff;
+  padding:  20px;
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  color: white;
+
+  @include sm{
+    display : none;
+  }
+}
+.menu button {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.816);
+  background-color: #708090;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+// .search {
+//   background-color: red;
+// }
+.buy {
+  border-radius: 5px 0 0 5px;
+  transition: all 0.7s ease;
+
+  &:hover {
+    background-color: rgb(112, 225, 112);
+    color: #0b162c;
+    scale: 1;
+  }
+}
+.rent {
+  border-radius: 0 5px 5px 0;
+  transition: all 0.7s ease;
+
+  &:hover {
+    background-color: rgb(228, 228, 89);
+    color: #0b162c;
+    scale: 1;
+  }
+}

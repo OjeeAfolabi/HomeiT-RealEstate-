@@ -1,0 +1,22 @@
+@import "./responsive";
+.layout {
+  font-family: "Lato", sans-serif;
+  background-color: #0b162c;
+  color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  
+
+  @include md {
+    // background-color: cornflowerblue;
+    max-width: 1024px;
+  }
+
+  @include sm {
+    // background-color: red;
+    max-width: 738px;
+  }
+}
