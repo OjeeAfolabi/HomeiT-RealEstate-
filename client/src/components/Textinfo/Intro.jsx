@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div>
       <div className="intro">
-        <p className="greet">It&apos;s Great To Be Home !</p>
+        <p className="greet">Get it, Home it !</p>
         <h1>
           Find Your<span> Perfect Home.</span>
         </h1>

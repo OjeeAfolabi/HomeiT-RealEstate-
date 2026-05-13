@@ -1,4 +1,4 @@
-@import "../../responsive.scss";
+@use "../../responsive" as *;
 
 .intro {
   position: absolute;
@@ -9,7 +9,13 @@
   z-index: 3;
 
   @include sm {
-    top: 20%;
+    top: 30%;
+    width: 100%;
+    padding: 20px;
+
+    @media (max-height: 667px) {
+      top: 40%;
+    }
   }
 }
 .intro span {
@@ -17,6 +23,9 @@
 }
 .greet {
   font-size: 24px;
+  @include sm {
+    font-size: 20px;
+  }
 }
 .intro h1 {
   font-size: 70px;
@@ -24,17 +33,24 @@
 
   @include sm {
     font-size: 30px;
+    @media (max-width: 375px) {
+      font-size: 28px;
+    }
+    @media (max-width: 360px) {
+      font-size: 24px;
+    }
   }
+  
 }
 
 .menu {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   display: grid;
   gap: 10px;
   justify-items: start;
   border: 1px solid #ffffff;
-  padding:  20px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.1);
 
   backdrop-filter: blur(6px);
@@ -47,39 +63,65 @@
 
   color: white;
 
-  @include sm{
-    display : none;
+  @include sm {
+    padding: 10px;
+    margin-top: 14px;
   }
 }
 .menu button {
   position: relative;
   padding: 10px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.816);
-  background-color: #708090;
   font-size: 16px;
   color: white;
   cursor: pointer;
+
+  @include sm {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
 }
-// .search {
-//   background-color: red;
-// }
+
 .buy {
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px 0 0 5px;
   transition: all 0.7s ease;
+  border: none;
+  margin-right: 3px;
 
   &:hover {
-    background-color: rgb(112, 225, 112);
-    color: #0b162c;
+    background-color: #1877f2;
+    color: white;
     scale: 1;
+  }
+  @include sm {
+    &:active {
+      background-color: #1877f2;
+      color: white;
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 .rent {
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0 5px 5px 0;
   transition: all 0.7s ease;
+  border: none;
 
   &:hover {
-    background-color: rgb(228, 228, 89);
-    color: #0b162c;
+    background-color: #1877f2;
+    color: white;
     scale: 1;
+  }
+
+  @include sm {
+    &:active {
+      background-color: #1877f2;
+      color: white;
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }

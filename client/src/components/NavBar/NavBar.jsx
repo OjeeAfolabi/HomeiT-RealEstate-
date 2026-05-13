@@ -40,7 +40,7 @@ const NavBar = () => {
           onClick={() => toggleMenu()}
         ></div>
         <div className={open ? "mobile-menu active" : "mobile-menu"}>
-          <ul className="mobile-menulist">
+          <ul>
             <li>Home</li>
             <li>Properties</li>
             <li>Agents</li>

@@ -1,4 +1,4 @@
-@import "./responsive";
+@use "../responsive.scss" as *;
 .layout {
   font-family: "Lato", sans-serif;
   background-color: #0b162c;
@@ -19,4 +19,10 @@
     // background-color: red;
     max-width: 738px;
   }
+
+  
+}
+
+.content{
+  margin-top: 0;
 }
