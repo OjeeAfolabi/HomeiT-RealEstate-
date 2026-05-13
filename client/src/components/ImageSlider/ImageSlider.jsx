@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { useState, useEffect } from "react";
 import "./imageslider.scss";
 import Intro from "../Textinfo/Intro";

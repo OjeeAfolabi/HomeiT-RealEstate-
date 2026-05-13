@@ -1,4 +1,4 @@
-import './listing.scss'
+import './listing.scss';
 const Listing = () => {
   return <div className='listing'>Featured</div>;
 };
