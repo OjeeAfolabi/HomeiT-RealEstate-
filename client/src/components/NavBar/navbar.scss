@@ -1,8 +1,5 @@
 @use "../../responsive.scss" as *;
-@font-face {
-  font-family: "Elianto";
-  src: url("../../../assets/fonts/Elianto-Regular.ttf") format("truetype");
-}
+
 
 .logo {
   width: 30px;
@@ -55,6 +52,7 @@ nav p {
   font-size: 18px;
   color: rgb(174, 173, 173);
   position: relative;
+
 
   @include sm {
     display: none;
